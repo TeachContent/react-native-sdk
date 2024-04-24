@@ -1,6 +1,6 @@
 {
   "name": "@edviron/react-native-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -41,7 +41,6 @@
     "!android/build",
     "!examples",
     "!*.tgz"
-    
   ],
   "repository": {
     "type": "git",

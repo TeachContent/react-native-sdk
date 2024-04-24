@@ -1,0 +1,17 @@
+examples/
+docs/
+.github/
+
+android/src/androidTest/
+android/src/test/
+android/build/
+android/app/build
+android/.gradle
+
+ios/Tests/
+
+yarn-error.log
+tsconfig.json
+yarn.lock
+
+*.tgz

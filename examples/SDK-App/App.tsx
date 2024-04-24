@@ -20,8 +20,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-// import {Payment} from 'edviron-payment-sdk-version-1';
-import {Payment} from 'edviron-react-native';
+import {Payment} from '@edviron/react-native-sdk';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -29,13 +28,7 @@ type SectionProps = PropsWithChildren<{
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  function success() {
-    console.log('payment success');
-  }
-
-  function fail() {
-    console.log('check2 fail');
-  }
+  
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };

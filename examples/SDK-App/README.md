@@ -9,7 +9,7 @@ npm install
 
 Run in IOS
 ```
-npm run start android
+npm run start ios
 
 ```
 

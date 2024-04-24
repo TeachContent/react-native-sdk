@@ -1,6 +1,6 @@
 {
   "name": "@edviron/react-native-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -42,5 +42,9 @@
     "!examples",
     "!*.tgz"
     
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeachContent/react-native-sdk"
+  }
 }

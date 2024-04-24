@@ -24,7 +24,7 @@ Add Native-webview package using
 ```
 npm i react-native-webview
 ```
-## Step 3: To open the upi app, add the below code just outside <application> in    AndroidManifest.xml file.
+## Step 3: To open the upi app, add the below code just outside ```<application>``` in AndroidManifest.xml file.
 ```
 <queries>
   <package android:name="com.google.android.apps.nbu.paisa.user" />

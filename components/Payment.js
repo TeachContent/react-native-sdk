@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {WebView} from 'react-native-webview';
 export const Payment = ({collectId, onSuccess, onFailure, mode}) => {
-  
+  const [webViewUrl,setWebviewUrl]=useState('');
+
 
   if (mode !== 'production' && mode !== 'sandbox') {
     return (
@@ -28,19 +29,25 @@ export const Payment = ({collectId, onSuccess, onFailure, mode}) => {
     );
   }
 
+  useEffect(()=>{
+   
+      if ((webViewUrl.includes('https://dev.pg.edviron.com/payment-success')|| webViewUrl.includes('https://pg.edviron.com/payment-success')) && webViewUrl.includes(collectId)) {
+       onSuccess();
+      } else if ((webViewUrl.includes('https://dev.pg.edviron.com/payment-failure')|| webViewUrl.includes('https://pg.edviron.com/payment-failure')) && webViewUrl.includes(collectId)) {
+        onFailure();
+      }
+    
+  },[webViewUrl])
+
   const handleNavigationStateChange = newNavState => {
     const {url} = newNavState;
-    
-    if (url.includes('payment-success') && url.includes(collectId)) {
-     onSuccess();
-    } else if (url.includes('payment-failure') && url.includes(collectId)) {
-      onFailure();
-    }
+    setWebviewUrl(url);
   };
+  
   const url =
     mode === 'production'
-      ? `https://pg.edviron.com/`
-      :`https://dev.pg.edviron.com/`
+      ? `https://pg.edviron.com`
+      :`https://dev.pg.edviron.com`
 
   return (
     <View style={styles.container}>

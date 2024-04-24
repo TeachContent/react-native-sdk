@@ -24,7 +24,10 @@ Add Native-webview package using
 ```
 npm i react-native-webview
 ```
-## Step 3: To open the upi app, add the below code just outside ```<application>``` in AndroidManifest.xml file.
+## Step 3: To open the upi app
+<u>For Android </u>
+### Add the below code just outside ```<application>``` in AndroidManifest.xml file.
+
 ```
 <queries>
   <package android:name="com.google.android.apps.nbu.paisa.user" />
@@ -35,6 +38,21 @@ npm i react-native-webview
   <package android:name="com.whatsapp" />
 </queries>
 ```
+
+<u>For IOS</u> 
+
+### Add the following code in  ```Info.plist``` file
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>tez</string>
+  <string>phonepe</string>
+  <string>paytm</string>
+  <string>gpay</string>
+</array>
+```
+
 ## Step 4: Pass the Collectid along with mode,onSuccess & OnFailure function.
 ```
 import {Payment} from '@edviron/react-native-sdk';

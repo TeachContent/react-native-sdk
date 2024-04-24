@@ -1,5 +1,5 @@
 {
-  "name": "edviron-react-native",
+  "name": "@edviron/react-native-sdk",
   "version": "1.0.0",
   "scripts": {
     "android": "react-native run-android",

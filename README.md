@@ -18,7 +18,7 @@ For more information read the official documentation
 [View Docs](https://documenter.getpostman.com/view/22738724/2s9Ykq5zui)
 ## Step 2: Install the React-native-SDK from npm & install dependency
 ```
-npm i edvpayment
+npm i @edviron/react-native-sdk
 ```
 Add Native-webview package using
 ```
@@ -37,7 +37,7 @@ npm i react-native-webview
 ```
 ## Step 4: Pass the Collectid along with mode,onSuccess & OnFailure function.
 ```
-import {Payment} from 'edvpayment';
+import {Payment} from '@edviron/react-native-sdk';
 <Payment
           collectId={"xxxxxxxxxxxxxxxxxxxxxx"}
           onSuccess={() => {
